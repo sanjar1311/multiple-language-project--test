@@ -8,21 +8,40 @@ body {
   font-size: 16px;
   font-family: "Arial", sans-serif;
 }
-.box1{
-  padding: 3rem;
-  background-color: bisque;
-}
-.box2{
-  padding: 5rem 3rem;
-  background-color: rgb(218, 170, 111);
-}
-.box3{
-  padding: 3rem;
-  background-color: rgb(219, 157, 80);
-}
+
 .btn {
   padding: 5px 15px;
 }
 h1 {
   text-align: center;
+}
+
+header.light {
+  background-color: bisque;
+  padding: 2rem;
+}
+header.dark {
+  background-color: #777;
+  color: aliceblue;
+  padding: 2rem;
+}
+
+main.light {
+  padding: 5rem 3rem;
+  background-color: rgb(218, 170, 111);
+}
+main.dark {
+  background-color: #555;
+  color: aliceblue;
+  padding: 2rem;
+}
+
+footer.light {
+  padding: 3rem;
+  background-color: rgb(219, 157, 80);
+}
+footer.dark {
+  background-color: #333;
+  color: aliceblue;
+  padding: 2rem;
 }

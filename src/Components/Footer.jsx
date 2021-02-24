@@ -1,5 +1,6 @@
 import { LangContext } from "../LangContext"
 import { useContext } from "react"
+import { ThemeContext } from "../ThemeContext"
 
 import { uz, ru, en } from "./Data"
 
@@ -7,11 +8,12 @@ import { uz, ru, en } from "./Data"
 function Footer () {
 
   const {lang} = useContext(LangContext)
+  const {theme} =useContext(ThemeContext)
 
   return (
 
     <>
-      <footer className="box3">
+      <footer className={theme}>
       <h1>
         {lang === 'uz' && uz.title}
         {lang === 'ru' && ru.title}

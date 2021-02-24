@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { LangContext } from '../LangContext'
+import { ThemeContext } from '../ThemeContext'
 
 import {mainUz, mainRu, en} from "./Data"
 
@@ -7,10 +8,11 @@ import {mainUz, mainRu, en} from "./Data"
 function Main() {
 
   const {lang} = useContext(LangContext)
+  const {theme} = useContext(ThemeContext)
 
   return (
     <>
-      <main className="box2">
+      <main className={theme}>
         <h1>
         {lang === 'uz' && mainUz.title}
         {lang === 'ru' && mainRu.title}

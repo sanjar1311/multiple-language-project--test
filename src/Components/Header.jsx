@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { LangContext} from '../LangContext'
+import { ThemeContext } from '../ThemeContext'
 
 import { uz, ru, en } from "./Data"
 
@@ -7,12 +8,14 @@ import { uz, ru, en } from "./Data"
 function Header() {
 
   const {lang, setLang} = useContext(LangContext)
+  const {theme, setTheme} =useContext(ThemeContext)
 
 
   return (
     <>
-      <header className="box1">
+      <header className={theme}>
 
+        <div>
         <select 
         defaultValue='uz' 
         onChange={(e)=> {
@@ -23,6 +26,17 @@ function Header() {
           <option value='ru'>Rus</option>
           <option value='en'>Eng</option>
         </select>
+
+        <select 
+        defaultValue="light"
+        onChange={(e)=> {
+          setTheme(e.target.value)
+        }}
+        >
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+        </div>
   
         <h1>
         {lang === 'uz' && uz.title}
